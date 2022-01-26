@@ -5,11 +5,12 @@ var options = {
   name: "Finansee Agency",
   description: "Use UPI Id: test@ybl to complete the test payment",
   image: "../images/logos/finansee.png",
-  order_id: "order_IoOYVQcnZhXa45", //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
+  order_id: "order_IoUoGr4rVApAhh", //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
   handler: function (response) {
-    alert(response.razorpay_payment_id);
-    alert(response.razorpay_order_id);
-    alert(response.razorpay_signature);
+  	alert("Payment Successful.\nYour session will be scheduled at the earliest.");
+    // alert(response.razorpay_payment_id);
+    // alert(response.razorpay_order_id);
+    // alert(response.razorpay_signature);
   },
   prefill: {
     name: "Sk Saddy",
