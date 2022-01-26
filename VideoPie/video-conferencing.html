@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- icons > font-awesome -->
+  <script src="https://kit.fontawesome.com/3b1cc6c86a.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./style.css" />
+  <title>Video Session | Finansee</title>
+</head>
+
+<body>
+  <!-- when video starts -->
+  <div id="video-call">
+    <div id="videoContainer">
+      <video id="local-video" autoplay></video>
+      <video id="remote-video" autoplay></video>
+      <h1 id="timer"></h1>
+      <div class="call-action">
+        <button onclick="muteVideo()">
+          <i id="muteVideoIcon" class="fas fa-video fa-2x" data-bs-toggle="tooltip" data-bs-placement="top"
+            title="Mute Video"></i>
+          <i id="unMuteVideoIcon" class="fas fa-video-slash fa-2x" data-bs-toggle="tooltip" data-bs-placement="top"
+            title="Unmute Video" style="display: none"></i>
+        </button>
+        <button onclick="muteAudio()">
+          <i id="muteAudioIcon" class="fas fa-microphone fa-2x" data-bs-toggle="tooltip" data-bs-placement="top"
+            title="Mute Audio" style="padding: 0px 5px"></i>
+          <i id="unMuteAudioIcon" class="fas fa-microphone-slash fa-2x" data-bs-toggle="tooltip" data-bs-placement="top"
+            title="Unmute Audio" style="display: none"></i>
+        </button>
+        <button data-bs-toggle="tooltip" data-bs-placement="top" title="Whiteboard">
+          <a href="./canvas/canvas.html" class="fas fa-chalkboard-teacher fa-2x" target="_blank"
+            style="text-decoration: none; color: black"></a>
+        </button>
+        <button onclick="screenShare()" id="shareBtn" data-bs-toggle="tooltip" data-bs-placement="top"
+          title="Screen Share">
+          <i class="fas fa-desktop fa-2x"></i>
+        </button>
+        <button id="openChat" data-bs-toggle="tooltip" data-bs-placement="top" title="Open Chat">
+          <i class="fas fa-comment-dots fa-2x"></i>
+        </button>
+        <button onclick="leaveCall()" data-bs-toggle="tooltip" data-bs-placement="top" title="End Call">
+          <i class="fas fa-sign-out-alt fa-2x"></i>
+        </button>
+      </div>
+    </div>
+    <div id="chatContainer" style="display: none">
+      <div id="displayMessages">
+        <!-- messages added dynamically -->
+      </div>
+      <!-- File transfer -->
+      <div id="fileTransfer">
+        <input type="file" name="send_file" id="inputFile" style="width: 250px" />
+        <button id="sendFileBtn">Send File</button>
+      </div>
+      <!-- Type your message here -->
+      <form action="#" id="messageForm">
+        <textarea id="inputMessage" placeholder="Enter your message..."></textarea>
+        <button id="sendMessageBtn">Send</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="./sender.js"></script>
+</body>
+
+</html>

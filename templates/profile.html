@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous" />
+  <!-- fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@100;200;300;400;600;700&display=swap"
+    rel="stylesheet" />
+  <!-- icons > font-awesome -->
+  <script src="https://kit.fontawesome.com/3b1cc6c86a.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="../css/style.css" />
+  <!-- favicon -->
+  <link rel="shortcut icon" type="image/jpg" href="../images/logos/favicon.png" />
+
+  <title>Profile | Finansee</title>
+
+  <style>
+    @media (max-width: 520px) {
+      .finansee-answers select {
+        width: 100% !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header > navigation bar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-none shadow-sm py-1 px-lg-5">
+    <div class="container">
+      <a class="navbar-brand col-4 ms-2" href="/"><img src="../images/logos/header-logo.png" alt="logo"
+          style="width: 175px" /></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse col-8" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-lg-auto ms-3 mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active mx-5" aria-current="page" href="./coachapplication.html">Become a
+              coach</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active me-5" aria-current="page" href="./findcoach.html">Find a
+              coach</a>
+          </li>
+          <div class="dropdown">
+            <button class="btn btn-success rounded-pill dropdown-toggle" type="button" id="dropdownMenuButton1"
+              data-bs-toggle="dropdown" aria-expanded="false">More Options</button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li class="nav-item ms-2">
+                <a class="nav-link active" aria-current="page" href="./dashboard.html">Dashboard</a>
+              </li>
+              <li class="nav-item ms-2 mb-2">
+                <a class="nav-link active" aria-current="page" href="./coachdashboard.html">Coach
+                  Dashboard</a>
+              </li>
+              <li class="nav-item ms-2">
+                <a href="./login.html">
+                  <button class="btn btn-outline-success rounded-pill px-4 py-1" type="submit">
+                    Log In
+                  </button></a>
+              </li>
+            </ul>
+          </div>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- main section -->
+  <div class="container my-5">
+    <section id="personal">
+      <!-- Name -->
+      <div class="row">
+        <div class="col-3 pe-0 d-flex">
+          <h4 class="my-auto">Name</h4>
+        </div>
+        <div class="col-lg-5 col-9">
+          <input type="text" class="
+                form-control
+                rounded-pill
+                border-3 border-success
+                ps-4
+                fs-5
+              " style="height: 45px" value="Sk Saddy" disabled />
+        </div>
+      </div>
+      <!-- Email -->
+      <div class="row mt-4">
+        <div class="col-3 pe-0 d-flex">
+          <h4 class="my-auto">Email</h4>
+        </div>
+        <div class="col-lg-5 col-9">
+          <input type="text" class="
+                form-control
+                rounded-pill
+                border-3 border-success
+                ps-4
+                fs-5
+              " style="height: 45px" value="saddam@saddam.com" disabled />
+        </div>
+      </div>
+    </section>
+    <hr class="mt-5" />
+    <h3 class="mt-5">YOUR FINANSEE ANSWERS</h3>
+    <form action="#" method="POST">
+      <!-- question 1 -->
+      <section class="mt-5 finansee-answers">
+        <div id="q1">
+          <h5>
+            What sentence best describes you when it comes to investing?
+          </h5>
+          <select class="rounded-pill border-3 border-success ps-4 w-50" name="question1" id="question1"
+            style="height: 45px; font-size: 1.1rem">
+            <option value="0">
+              I follow other people’s advice on how to invest as long as I
+              trust them
+            </option>
+            <option value="1">
+              I look for safety in my investments. I am willing to give up
+              some return as long as my investments are safe
+            </option>
+            <option value="2">I invest in things that I know well</option>
+          </select>
+        </div>
+      </section>
+      <!-- question 2 -->
+      <section class="mt-5 finansee-answers">
+        <div id="q2">
+          <h5>What do you prioritize when you plan to invest?</h5>
+          <select class="rounded-pill border-3 border-success ps-4 w-50" name="question2" id="question2"
+            style="height: 45px; font-size: 1.1rem">
+            <option value="0">
+              High rates of return and diversification
+            </option>
+            <option value="1">Comfort and safety</option>
+            <option value="2">Constant but small gains</option>
+          </select>
+        </div>
+      </section>
+      <!-- question 3 -->
+      <section class="mt-5 finansee-answers">
+        <div id="q3">
+          <h5>What is your experience with investing?</h5>
+          <select class="rounded-pill border-3 border-success ps-4 w-50" name="question3" id="question3"
+            style="height: 45px; font-size: 1.1rem">
+            <option value="0">
+              I have some knowledge in markets and investing
+            </option>
+            <option value="1">
+              I have good knowledge of markets and investing, but I lack in
+              some important areas of finance
+            </option>
+            <option value="2">
+              I have extensive knowledge in markets and investing
+            </option>
+            <option value="3">None</option>
+          </select>
+        </div>
+      </section>
+      <!-- question 4 -->
+      <section class="mt-5 finansee-answers">
+        <div id="q4">
+          <h5>
+            What would you do if your investments’ returns suddenly dropped
+            significantly?
+          </h5>
+          <select class="rounded-pill border-3 border-success ps-4 w-50" name="question4" id="question4"
+            style="height: 45px; font-size: 1.1rem">
+            <option value="0">
+              Close all my positions (sell) immediatel
+            </option>
+            <option value="1">
+              Close some of my positions (sell) immediately, but still hold
+              some positions
+            </option>
+            <option value="2">
+              Hold my positions, as I am tolerant to these drops
+            </option>
+          </select>
+        </div>
+      </section>
+      <!-- question 5 -->
+      <section class="mt-5 finansee-answers">
+        <div id="q5">
+          <h5>For how long do you plan to keep your money invested?</h5>
+          <select class="rounded-pill border-3 border-success ps-4 w-50" name="question5" id="question5"
+            style="height: 45px; font-size: 1.1rem">
+            <option value="0">Less than a year</option>
+            <option value="1">1-3 years</option>
+            <option value="2">3-5 years</option>
+            <option value="3">5+ years</option>
+          </select>
+        </div>
+      </section>
+      <!-- question 6 -->
+      <section class="mt-5 finansee-answers">
+        <div id="q6">
+          <h5>What is your primary goal when it comes to investing?</h5>
+          <select class="rounded-pill border-3 border-success ps-4 w-50" name="question6" id="question6"
+            style="height: 45px; font-size: 1.1rem">
+            <option value="0">
+              Long term growth, smaller rates of return, but smaller risks
+            </option>
+            <option value="1">
+              Short term growth, higher rates of return, but higher risks
+            </option>
+          </select>
+        </div>
+      </section>
+      <!-- question 7 -->
+      <section class="mt-5 finansee-answers">
+        <div id="question7">
+          <h5>Areas that interests you</h5>
+          <div class="mb-2 text-danger d-none" id="selectChekboxWarning">
+            Select atleast 1 option
+          </div>
+          <div class="form-check">
+            <!-- option 1 -->
+            <input class="form-check-input" type="checkbox" name="q7" id="check0" value="0" checked />
+            <label class="form-check-label" for="check0"> Stocks </label>
+          </div>
+          <div class="form-check">
+            <!-- option 2 -->
+            <input class="form-check-input" type="checkbox" name="q7" id="check1" value="1" checked />
+            <label class="form-check-label" for="check1">
+              Mutual Funds
+            </label>
+          </div>
+          <div class="form-check">
+            <!-- option 3 -->
+            <input class="form-check-input" type="checkbox" name="q7" id="check2" value="2" checked />
+            <label class="form-check-label" for="check2"> ETFs </label>
+          </div>
+          <div class="form-check">
+            <!-- option 4 -->
+            <input class="form-check-input" type="checkbox" name="q7" id="check3" value="3" />
+            <label class="form-check-label" for="check3">
+              Cryptocurrency
+            </label>
+          </div>
+          <div class="form-check">
+            <!-- option 5 -->
+            <input class="form-check-input" type="checkbox" name="q7" id="check4" value="4" />
+            <label class="form-check-label" for="check4"> REITs </label>
+          </div>
+          <div class="form-check">
+            <!-- option 6 -->
+            <input class="form-check-input" type="checkbox" name="q7" id="check5" value="5" />
+            <label class="form-check-label" for="check5"> Bonds </label>
+          </div>
+          <div class="form-check">
+            <!-- option 7 -->
+            <input class="form-check-input" type="checkbox" name="q7" id="check6" value="6" />
+            <label class="form-check-label" for="check6"> Options </label>
+          </div>
+        </div>
+      </section>
+      <div class="d-flex mt-4 align-items-center">
+        <button class="btn btn-outline-success rounded-pill" id="profileUpdateBtn" style="width: 135px">
+          Save Changes
+        </button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-success mt-5" id="footer-elements">
+    <div class="container bg-success">
+      <div class="row py-4 mx-0">
+        <!-- logo & details -->
+        <div class="col-2 pe-0">
+          <img src="../images/logos/finansee-footer.png" alt="" style="width: 145px; height: 115px" />
+        </div>
+        <div class="col-4 ps-0 text-white">
+          <h5 class="mt-2">Finansee</h5>
+          <p class="mx-auto mb-2 fs-5">Copyright &copy; 2021</p>
+          <a href="#" target="_blank" class="m-auto fs-5 fw-lighter text-decoration-none text-white">Terms of
+            Service</a>
+          |
+          <a href="#" target="_blank" class="m-auto fs-5 fw-lighter text-decoration-none text-white">Privacy Policy</a>
+        </div>
+        <!-- links -->
+        <div class="col-3 fw-light">
+          <a href="/" class="d-block text-white text-decoration-none mt-2 fs-5">Home</a>
+          <a href="./findcoach.html" class="d-block text-white text-decoration-none my-1 fs-5">Find a
+            coach</a>
+          <a href="./coachapplication.html" class="d-block text-white text-decoration-none fs-5">Become a
+            coach</a>
+        </div>
+        <!-- contacts -->
+        <div class="col-3 text-white">
+          <a class="mb-auto text-white text-decoration-none fs-5 fw-lighter"
+            href="mailto:help@finansee.com">help@finansee.com</a>
+          <a class="my-2 text-white text-decoration-none fs-5 fw-lighter d-block" href="tel:+55 99 9999-9999">+55 99
+            9999-9999</a>
+          <div>
+            <a href="https://www.linkedin.com/" class="fab fa-linkedin-in text-decoration-none text-white fs-5"
+              target="_blank"></a>
+            <a href="https://twitter.com/" class="fab fa-twitter text-decoration-none text-white fs-5 mx-3"
+              target="_blank"></a>
+            <a href="https://www.facebook.com/" class="fab fa-facebook-f text-decoration-none text-white fs-5"
+              target="_blank"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    var id = "question" + `{{ forloop.counter }}`;
+    if (`{{ forloop.counter }}` == 7) {
+      items = `{{val}}`.split("");
+      for (let i = 0; i < items.length; i++) {
+        var checkId = "check" + items[i];
+        document.getElementById(checkId).checked = true;
+      }
+    } else {
+      document.getElementById(id).options[`{{ val }}`].selected = true;
+    }
+  </script>
+  <!-- Optional JavaScript; choose one of the two! -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="../js/hashSHA256.js"></script>
+  <script src="../js/profile.js"></script>
+
+  <!-- Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

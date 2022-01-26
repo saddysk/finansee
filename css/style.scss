@@ -1,0 +1,49 @@
+$pFontSize: 21px;
+$pFontWeight: 200;
+$headSize: 40px;
+$headWeight: 200;
+$bgColor: #69b26f;
+@import "./layout";
+@import "./media";
+
+* {
+  font-family: "Overpass", sans-serif;
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+
+.bg-success,
+.btn-success {
+  background: $bgColor !important;
+  border: none;
+}
+.border-success,
+.text-success {
+  border-color: $bgColor !important;
+}
+p {
+  font-size: $pFontSize;
+  font-weight: $pFontWeight;
+}
+.heading {
+  font-size: $headSize;
+  font-weight: $headWeight;
+}
+.services {
+  @extend p;
+  background: #4e9b55;
+  color: white !important;
+  width: fit-content;
+}
+
+// quiz page
+.form-check-label {
+  font-weight: $pFontWeight;
+  font-size: 17px;
+}
+
+.img-clip-circle {
+  width: 145px;
+  clip-path: circle(48% at 50% 50%);
+}

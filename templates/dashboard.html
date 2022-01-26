@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous" />
+  <!-- fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@100;200;300;400;600;700&display=swap"
+    rel="stylesheet" />
+  <!-- icons > font-awesome -->
+  <script src="https://kit.fontawesome.com/3b1cc6c86a.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="../css/style.css" />
+  <!-- favicon -->
+  <link rel="shortcut icon" type="image/jpg" href="../images/logos/favicon.png" />
+
+  <title>Dashboard - Finansee</title>
+</head>
+
+<body>
+  <!-- Header > navigation bar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-none shadow-sm py-1 px-lg-5">
+    <div class="container">
+      <a class="navbar-brand col-4 ms-2" href="/"><img src="../images/logos/header-logo.png" alt="logo"
+          style="width: 175px" /></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse col-8" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-lg-auto ms-3 mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active me-5" aria-current="page" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="./findcoach.html">Find a coach</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active mx-5" aria-current="page" href="./coachapplication.html">Become a
+              coach</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- main -->
+  <div class="container my-5 px-lg-5">
+    <div class="row">
+      <div class="col-2" style="width: max-content">
+        <a href="./profile.html" class="text-decoration-none">
+          <div class="bg-success rounded-circle d-flex" style="width: 110px; height: 110px">
+            <p class="m-auto text-center fw-normal text-white">MY PROFILE</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-lg-6 col-7 pt-lg-3 pt-2 ps-lg-5 px-0">
+        <span class="fs-2 fw-light">Welcome, <b>Saddy</b></span><br />
+        <span class="fs-5 text-muted">to your Member Dashboard</span>
+      </div>
+      <div class="col-lg-2 col-6 pt-3 ps-0">
+        <a href="../videopie/video-conferencing.html" target="_blank"
+          class="btn btn-success rounded-pill fs-5 px-4 text-decoration-none text-white">
+          Join Session</a>
+      </div>
+      <div class="col-lg-2 col-6 pt-3">
+        <!-- payment button -->
+        <button type="submit" class="btn btn-success rounded-pill fs-5 px-4" onclick="CreateOrder()"
+          data-bs-toggle="tooltip" data-bs-placement="top"
+          title="Book a session with ₹ 299 to schedule a meet with your coach.">BOOK
+          NOW</button>
+      </div>
+    </div>
+
+    <div class="row mt-5 pt-3">
+      <div class="col-12">
+        <h3 class="mb-4">Category you're interested in</h3>
+        <span class="fs-5 me-4 fw-light border border-success rounded-pill px-4 py-1">Stocks</span>
+        <span class="fs-5 me-4 fw-light border border-success rounded-pill px-4 py-1">ETFs</span>
+        <span class="fs-5 me-4 fw-light border border-success rounded-pill px-4 py-1 mt-lg-0 mt-3 d-inline-block">Mutual
+          Funds</span>
+      </div>
+    </div>
+    <div class="row mt-5 pt-3 px-2">
+      <h3 class="p-0">Your Coach</h3>
+      <!-- display coaches -->
+      <div class="row displayCoach d-flex justify-content-between">
+        <!-- coach -->
+        <div class="col-lg-6 col-12 mt-2">
+          <div class="row py-2 ps-2 box border border-2 rounded-2 border-success">
+            <div class="row row1">
+              <div class="col-lg-7">
+                <h2 class="mt-2 text-success fw-light">
+                  <span>Ron M</span>
+                </h2>
+                <div>
+                  <span class="fs-5">Experience: </span><span class="fw-light fs-5">1 year</span><br />
+                  <span class="fs-5">Expertise: </span>
+                  <span class="fw-light me-4 text-muted fs-5">Stocks</span><br />
+                  <span class="fs-5">Qualification: </span><span class="fw-light fs-5">M. Com.</span>
+                </div>
+              </div>
+              <div class="col-lg-5">
+                <img class="img-clip-circle" src="../images/temp_man.jpg" alt="expert's image" />
+              </div>
+            </div>
+            <div class="row row2">
+              <p class="lh-sm mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus quae tempora
+                officia,
+                tempore facilis quod itaque suscipit praesentium ratione iste maiores modi dolorem ut!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-success mt-5" id="footer-elements">
+    <div class="container bg-success">
+      <div class="row py-4 mx-0">
+        <!-- logo & details -->
+        <div class="col-2 pe-0">
+          <img src="../images/logos/finansee-footer.png" alt="" style="width: 145px; height: 115px" />
+        </div>
+        <div class="col-4 ps-0 text-white">
+          <h5 class="mt-2">Finansee</h5>
+          <p class="mx-auto mb-2 fs-5">Copyright &copy; 2021</p>
+          <a href="#" target="_blank" class="m-auto fs-5 fw-lighter text-decoration-none text-white">Terms of
+            Service</a>
+          |
+          <a href="#" target="_blank" class="m-auto fs-5 fw-lighter text-decoration-none text-white">Privacy Policy</a>
+        </div>
+        <!-- links -->
+        <div class="col-3 fw-light">
+          <a href="/" class="d-block text-white text-decoration-none mt-2 fs-5">Home</a>
+          <a href="./findcoach.html" class="d-block text-white text-decoration-none my-1 fs-5">Find a
+            coach</a>
+          <a href="./coachapplication.html" class="d-block text-white text-decoration-none fs-5">Become a
+            coach</a>
+        </div>
+        <!-- contacts -->
+        <div class="col-3 text-white">
+          <a class="mb-auto text-white text-decoration-none fs-5 fw-lighter"
+            href="mailto:help@finansee.com">help@finansee.com</a>
+          <a class="my-2 text-white text-decoration-none fs-5 fw-lighter d-block" href="tel:+55 99 9999-9999">+55 99
+            9999-9999</a>
+          <div>
+            <a href="https://www.linkedin.com/" class="fab fa-linkedin-in text-decoration-none text-white fs-5"
+              target="_blank"></a>
+            <a href="https://twitter.com/" class="fab fa-twitter text-decoration-none text-white fs-5 mx-3"
+              target="_blank"></a>
+            <a href="https://www.facebook.com/" class="fab fa-facebook-f text-decoration-none text-white fs-5"
+              target="_blank"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Optional JavaScript; choose one of the two! -->
+  <script src="../js/payment.js"></script>
+
+  <!-- Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

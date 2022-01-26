@@ -1,0 +1,213 @@
+@media (max-width: 1000px) {
+  .nav-link,
+  .navbar-brand {
+    margin: 0px !important;
+  }
+  .navbar-nav > button {
+    width: 100%;
+    text-align: start !important;
+    margin: 7px 0px !important;
+  }
+  #footer-elements a {
+    /* font-size: 19px; */
+  }
+  #footer-elements .col-2 {
+    width: 30%;
+  }
+  #footer-elements .col-4 {
+    width: 60%;
+  }
+  #footer-elements .col-3 {
+    width: 33%;
+    margin-top: 2rem;
+  }
+  #footer-elements .col-3:nth-child(odd) {
+    margin-left: 12.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #footer-elements {
+    display: contents;
+  }
+  #footer-elements .col-2,
+  #footer-elements .col-3,
+  #footer-elements .col-4 {
+    width: 100%;
+    padding: 1rem 1rem !important;
+    margin: 0px !important;
+  }
+}
+
+@media (max-width: 700px) and (min-width: 500px) {
+  #footer-elements .col-3:nth-child(odd) {
+    margin-left: 9rem !important;
+    padding-right: 0px !important;
+  }
+  .col-3:nth-child(even) {
+    padding: 0px !important;
+  }
+  .col-3:nth-child(even) p,
+  .col-3:nth-child(even) .services {
+    font-size: 19px !important;
+  }
+}
+
+@media (max-width: 1000px) and (min-width: 480px) {
+  #howToStart .card {
+    width: 13rem !important;
+  }
+  #howToStart .side-arrow {
+    width: 60px !important;
+    margin-left: 5px !important;
+  }
+  .services {
+    margin: 7px !important;
+  }
+  #hero > .col-5,
+  #hero > .col-5 > h1 {
+    margin-top: 10px !important;
+  }
+  #questionaire {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .auth-container {
+    width: 100% !important;
+  }
+  .displaCoach {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+    -ms-flex-direction: column !important;
+    flex-direction: column !important;
+    margin: 0% !important;
+  }
+  .displaCoach .col-6 {
+    width: 100vh !important;
+    margin-bottom: 3rem;
+  }
+  .quick-search select {
+    width: 50% !important;
+  }
+  .pagination {
+    margin-top: 0rem !important;
+  }
+}
+
+@media (max-width: 540px) {
+  .auth-form {
+    width: 95% !important;
+  }
+  .displaCoach .col-6 .row {
+    padding-left: 0.5rem !important;
+    padding-right: 0rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  #hero,
+  #whyus {
+    display: contents;
+  }
+  #hero .col-4,
+  #hero .col-5,
+  #hero .col-6,
+  #whyus .col-4,
+  #whyus .col-5,
+  #whyus .col-6 {
+    margin-top: 0px !important;
+    width: 95%;
+  }
+  #hero h1,
+  #whyus h1 {
+    margin-top: 2rem !important;
+  }
+  .services {
+    margin: 10px !important;
+    width: 75% !important;
+  }
+  #howToStart {
+    display: contents;
+  }
+  #howToStart .side-arrow {
+    display: none !important;
+  }
+  #howToStart .down-arrow {
+    display: block !important;
+    margin-left: 5rem;
+  }
+  #howToStart h1 {
+    margin-top: 5rem !important;
+  }
+  #questionaire {
+    width: 100% !important;
+  }
+  .displaCoach .row1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+  }
+  .displaCoach .row1 .col-7 {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+  .quick-search select {
+    width: 75% !important;
+  }
+}
+
+* {
+  font-family: "Overpass", sans-serif;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+
+.bg-success,
+.btn-success {
+  background: #69b26f !important;
+  border: none;
+}
+
+.border-success,
+.text-success {
+  border-color: #69b26f !important;
+}
+
+p,
+.services {
+  font-size: 21px;
+  font-weight: 200;
+}
+
+.heading {
+  font-size: 40px;
+  font-weight: 200;
+}
+
+.services {
+  background: #4e9b55;
+  color: white !important;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.form-check-label {
+  font-weight: 200;
+  font-size: 17px;
+}
+
+.img-clip-circle {
+  width: 145px;
+  -webkit-clip-path: circle(48% at 50% 50%);
+  clip-path: circle(48% at 50% 50%);
+}
+/*# sourceMappingURL=style.css.map */

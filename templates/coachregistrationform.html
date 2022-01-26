@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en" fs-5>
+
+<head>
+  <!-- Requir
+        style="height: 45px;"ed meta tag50-->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous" />
+  <!-- fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@100;200;300;400;600;700&display=swap"
+    rel="stylesheet" />
+  <!-- icons > font-awesome -->
+  <script src="https://kit.fontawesome.com/3b1cc6c86a.js" crossorigin="anonymous"></script>
+  <!-- Bootstrap JS -->
+  <!-- <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+      crossorigin="anonymous"
+    ></script> -->
+  <!-- Cropper CSS -->
+  <link rel="stylesheet" href="../cropper/cropper.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+
+  <title>Coach Registration - Finansee</title>
+  <!-- favicon -->
+  <link rel="shortcut icon" type="image/jpg" href="../images/logos/favicon.png" />
+
+  <style>
+    form {
+      width: 75% !important;
+    }
+
+    @media (max-width: 520px) {
+      form {
+        width: 90% !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header > navigation bar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-none shadow-sm py-1 px-lg-5">
+    <div class="container">
+      <a class="navbar-brand col-4 ms-2" href="/"><img src="../images/logos/header-logo.png" alt="logo"
+          style="width: 175px" /></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse col-8" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-lg-auto ms-3 mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="./findcoach.html">Find a coach</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active mx-5" aria-current="page" href="./coachapplication.html">Become a
+              coach</a>
+          </li>
+          <div class="dropdown">
+            <button class="btn btn-success rounded-pill dropdown-toggle" type="button" id="dropdownMenuButton1"
+              data-bs-toggle="dropdown" aria-expanded="false">More Options</button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li class="nav-item ms-2">
+                <a class="nav-link active" aria-current="page" href="./dashboard.html">Dashboard</a>
+              </li>
+              <li class="nav-item ms-2 mb-2">
+                <a class="nav-link active" aria-current="page" href="./coachdashboard.html">Coach
+                  Dashboard</a>
+              </li>
+              <li class="nav-item ms-2">
+                <a href="./login.html">
+                  <button class="btn btn-outline-success rounded-pill px-4 py-1" type="submit">
+                    Log In
+                  </button></a>
+              </li>
+            </ul>
+          </div>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- main section -->
+  <div class="container auth-container w-50 mb-5">
+    <h1 class="text-center my-5 fw-light">Welcome to Finansee</h1>
+    <!-- input form -->
+    <form action="#" class="m-auto" enctype="multipart/form-data">
+      <!-- profile picture -->
+      <div class="mb-4 d-flex">
+        <div class="col-6">
+          <img class="cropped rounded-circle border border-1" style="height: 145px; width: 145px; object-fit: cover"
+            src="../images/profile-icon.jpg" alt="dp" name="profilepicture" />
+        </div>
+        <!-- image file input -->
+        <div class="col-6 m-auto">
+          <label for="profileimage">Select the Profile Image</label>
+          <input type="file" accept=".jpg, .jpeg, .png" name="profileimage" class="w-100 mt-2" id="profileimage" />
+          <!-- modal for cropping the image -->
+          <div class="modal" id="myModal" tabindex="-1">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-body pb-0">
+                  <div class="box-2">
+                    <div class="result" style="
+                          width: 450px !important;
+                          height: 425px !important;
+                        "></div>
+                  </div>
+                </div>
+                <div class="modal-footer p-0 border-0">
+                  <!-- Save Image -->
+                  <div class="mb-3 me-4">
+                    <div class="options hide"></div>
+                    <!-- save btn -->
+                    <button type="button" class="btn px-4 fs-5 save btn-success">Save</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- name -->
+      <div class="mb-4 d-flex">
+        <!-- first name -->
+        <div class="col-7">
+          <input type="text" class="
+                form-control
+                rounded-pill
+                border-3 border-success
+                ps-4
+                fs-5
+              " id="firstname" name="firstname" placeholder="First name" style="height: 50px" />
+        </div>
+        <!-- last name -->
+        <div class="col-4 mx-auto" style="width: 40% !important">
+          <input type="text" class="
+                form-control
+                rounded-pill
+                border-3 border-success
+                ps-4
+                fs-5
+              " id="lastname" name="lastname" placeholder="Last name initial" style="height: 50px" />
+        </div>
+      </div>
+      <!-- email address -->
+      <div class="mb-4">
+        <input type="email" class="form-control rounded-pill border-3 border-success ps-4 fs-5" id="email" name="email"
+          placeholder="Email address" />
+      </div>
+      <!-- phone number -->
+      <div class="mb-4">
+        <input type="tel" pattern="[0-9]{10}" class="form-control rounded-pill border-3 border-success ps-4 fs-5"
+          id="phone" name="phone" placeholder="Phone number (1212121212)" />
+      </div>
+      <!-- mailing address -->
+      <div class="mb-4">
+        <input type="text" class="form-control rounded-pill border-3 border-success ps-4 fs-5" id="address"
+          name="address" placeholder="Mailing address" />
+      </div>
+      <!-- Area of expertise -->
+      <div class="mb-4">
+        <select class="rounded-pill border-3 border-success ps-4 w-100" name="expertise" id="expertise"
+          style="height: 47px; font-size: 1.1rem">
+          <option value="">-- Area of expertise --</option>
+          <option value="0">Stocks</option>
+          <option value="1">Mutual Funds</option>
+          <option value="2">ETFs</option>
+          <option value="3">Cryptocurrency</option>
+          <option value="4">REITs</option>
+          <option value="5">Bonds</option>
+          <option value="6">Options</option>
+        </select>
+      </div>
+      <!-- Previous experience -->
+      <div class="mb-4">
+        <input type="text" class="form-control rounded-pill border-3 border-success ps-4 fs-5" id="previousexperience"
+          name="previousexperience" placeholder="Previous experience" />
+      </div>
+      <!-- level of education -->
+      <div class="mb-4">
+        <select class="rounded-pill border-3 border-success ps-4 w-100" name="education" id="education"
+          style="height: 47px; font-size: 1.1rem">
+          <option value="">-- Level of education --</option>
+          <option value="High School or GED equivalent">
+            High School or GED equivalent
+          </option>
+          <option value="Associate's Degree">Associate's Degree</option>
+          <option value="Bachelor’s Degree">Bachelor’s Degree</option>
+          <option value="Master’s Degree">Master’s Degree</option>
+          <option value="Doctorate’s Degree">Doctorate’s Degree</option>
+        </select>
+      </div>
+      <!-- input files -->
+      <div class="mb-4">
+        <label class="fs-5 ms-2" for="importantFiles" style="color: rgba(0, 0, 0, 0.5)">Copy of ID (type: pdf)</label>
+        <input type="file" class="form-control py-2 rounded-pill border-3 border-success" id="importantFiles"
+          name="importantFiles" accept=".pdf" />
+      </div>
+      <!-- About the coach -->
+      <div class="mb-4">
+        <textarea name="aboutcoach" class="form-control border-3 border-success ps-4" id="aboutcoach" cols="30" rows="7"
+          placeholder="Tell us about yourself"></textarea>
+      </div>
+      <!-- note for the applicants -->
+      <p class="fs-6 ms-2">
+        <b>Please note: </b>If approved, payment information will also be
+        acquired, such as SSN, ITIN, and bank account information.
+      </p>
+      <!-- submit button -->
+      <section class="d-flex">
+        <button class="btn btn-success rounded-pill w-50 mt-4 mx-auto" onclick="submitCoachRegistrationForm()"
+          style="height: 45px">
+          <p style="font-size: 25px">Enroll</p>
+        </button>
+      </section>
+    </form>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-success mt-5" id="footer-elements">
+    <div class="container bg-success">
+      <div class="row py-4 mx-0">
+        <!-- logo & details -->
+        <div class="col-2 pe-0">
+          <img src="../images/logos/finansee-footer.png" alt="" style="width: 145px; height: 115px" />
+        </div>
+        <div class="col-4 ps-0 text-white">
+          <h5 class="mt-2">Finansee</h5>
+          <p class="mx-auto mb-2 fs-5">Copyright &copy; 2021</p>
+          <a href="#" target="_blank" class="m-auto fs-5 fw-lighter text-decoration-none text-white">Terms of
+            Service</a>
+          |
+          <a href="#" target="_blank" class="m-auto fs-5 fw-lighter text-decoration-none text-white">Privacy Policy</a>
+        </div>
+        <!-- links -->
+        <div class="col-3 fw-light">
+          <a href="/" class="d-block text-white text-decoration-none mt-2 fs-5">Home</a>
+          <a href="./findcoach.html" class="d-block text-white text-decoration-none my-1 fs-5">Find a
+            coach</a>
+          <a href="./coachapplication.html" class="d-block text-white text-decoration-none fs-5">Become a
+            coach</a>
+        </div>
+        <!-- contacts -->
+        <div class="col-3 text-white">
+          <a class="mb-auto text-white text-decoration-none fs-5 fw-lighter"
+            href="mailto:help@finansee.com">help@finansee.com</a>
+          <a class="my-2 text-white text-decoration-none fs-5 fw-lighter d-block" href="tel:+55 99 9999-9999">+55 99
+            9999-9999</a>
+          <div>
+            <a href="https://www.linkedin.com/" class="fab fa-linkedin-in text-decoration-none text-white fs-5"
+              target="_blank"></a>
+            <a href="https://twitter.com/" class="fab fa-twitter text-decoration-none text-white fs-5 mx-3"
+              target="_blank"></a>
+            <a href="https://www.facebook.com/" class="fab fa-facebook-f text-decoration-none text-white fs-5"
+              target="_blank"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Optional JavaScript; choose one of the two! -->
+  <script>
+    function submitCoachRegistrationForm() {
+      alert("We have recorded your inputs. If approved, we'll get back to you soon.");
+      window.location.assign("../index.html");
+    }
+  </script>
+  <script src="../cropper/cropper.js"></script>
+  <script src="../cropper/main.js"></script>
+  <!-- Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
